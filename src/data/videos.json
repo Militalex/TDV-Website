@@ -1,0 +1,34 @@
+{
+    "_comment": "Beim ändern der Daten das Datum akutalisieren",
+    "updated": "15.03.2022 12:21",
+
+    "videos": [
+        {
+            "type": "video",
+
+            "_comment": "Name des Vidoes",
+            "title": "Big Buck Bunny",
+
+            "_comment2": "Produzent des Videos",
+            "producer": "Sago",
+
+            "date": "12.7.2008",
+
+            "source": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+            "type": "youtube",
+
+            "_comment": "Name des Vidoes",
+            "title": "Big Buck Bunny YouTube",
+
+            "_comment2": "Produzent des Videos",
+            "producer": "Blender",
+
+            "date": "29.5.2008",
+
+            "_comment3": "Video-URL, nach https://www.youtube.com/watch?v=",
+            "link": "YE7VzlLtp-4"
+        }
+    ]
+}

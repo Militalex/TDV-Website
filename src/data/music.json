@@ -1,0 +1,55 @@
+{
+    "_comment": "Beim ändern der Daten das Datum akutalisieren",
+    "updated": "15.03.2022 12:21",
+
+    "songs": [
+        {
+            "_comment": "Name des Songs",
+            "title": "Overture",
+
+            "_comment2": "Interpret",
+            "author": "Linphator",
+
+            "length": "1:49",
+
+            "image": "https://tdv.minecraftmusical.com/textures/th5.png?width=1202&height=676",
+            "source": "/Overture.mp3"
+        },
+        {
+            "_comment": "Name des Songs",
+            "title": "Bows",
+
+            "_comment2": "Interpret",
+            "author": "Linphator",
+
+            "length": "0:39",
+
+            "image": "https://tdv.minecraftmusical.com/textures/th5.png?width=1202&height=676",
+            "source": "https://cdn.discordapp.com/attachments/847602626040430632/904546019256176680/Bows.mp3"
+        },
+        {
+            "_comment": "Name des Songs",
+            "title": "Carpe Noctem",
+
+            "_comment2": "Interpret",
+            "author": "Linphator",
+
+            "length": "0:31",
+
+            "image": "https://tdv.minecraftmusical.com/textures/th5.png?width=1202&height=676",
+            "source": "https://cdn.discordapp.com/attachments/847602626040430632/859187419261304862/CN.mp3"
+        },
+        {
+            "_comment": "Name des Songs",
+            "title": "Carpe Noctem Teil 2",
+
+            "_comment2": "Interpret",
+            "author": "Linphator",
+
+            "length": "0:52",
+
+            "image": "https://tdv.minecraftmusical.com/textures/th5.png?width=1202&height=676",
+            "source": "https://cdn.discordapp.com/attachments/797423013682741248/854524031494520872/Carpe_Noctem.mp3"
+        }
+    ]
+}

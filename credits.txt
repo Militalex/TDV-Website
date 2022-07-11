@@ -1,5 +1,0 @@
-# Entwickler
-
-## DiscordBot
-Der Urprüngliche DiscordBot stammt von GamingKlex (Discord: <@328919115777441803> GamingKlex#1879)
-Den Feja111(Jakob_fel#3647;https://feja111.de/bio/feja111) weiterentwickelt. 

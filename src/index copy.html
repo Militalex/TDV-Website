@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanz Der Vampire in Minecraft</title>
+    <link href="\dist\output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bg-zinc-800 text-white">
+        <header class="sticky top-0 z-[55]">
+            <div class="relative bg-zinc-800">
+                <div
+                    class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+                    <div class="flex justify-start lg:w-0 lg:flex-1">
+                        <a href="#">
+                            <span class="sr-only">Tanz der Vampire</span>
+                            <img class="h-8 w-auto sm:h-10" src="https://tdv.minecraftmusical.com/textures/TDV5.png"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="-mr-2 -my-2 md:hidden">
+                        <button onclick="toggleMobileMenu()" type="button"
+                            class="bg-zinc-600 rounded-md p-2 inline-flex items-center justify-center text-zinc-400 hover:text-zinc-500 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            aria-expanded="false">
+                            <span class="sr-only">Open menu</span>
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!--
+                        <nav class="hidden md:flex space-x-10">
+                            <a href="#" class="text-base font-medium text-gray-100 hover:text-gray-300">
+                                Startseite
+                            </a>
+                            <a href="#" class="text-base font-medium text-gray-100 hover:text-gray-300">
+                                Medien
+                            </a>
+                            <a href="#" class="text-base font-medium text-gray-100 hover:text-gray-300">
+                                Team
+                            </a>
+                            <a href="#" class="text-base font-medium text-gray-100 hover:text-gray-300">
+                                Referenzen
+                            </a>
+                        </nav>
+                    -->
+                    <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                        <a href="/index.html"
+                            class="whitespace-nowrap text-base font-medium text-gray-100 hover:text-gray-300">
+                            Startseite
+                        </a>
+                        <a href="/medien/"
+                            class="ml-8 whitespace-nowrap text-base font-medium text-gray-100 hover:text-gray-300">
+                            Medien
+                        </a>
+                        <a href="/team.html"
+                            class="ml-8 whitespace-nowrap text-base font-medium text-gray-100 hover:text-gray-300">
+                            Team
+                        </a>
+                        <a href="/programmheft.html"
+                            class="ml-8 whitespace-nowrap text-base font-medium text-gray-100 hover:text-gray-300">
+                            Programmheft
+                        </a>
+                        <a href="https://discord.gg/HM5AbccMzk"
+                            class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-red-700 hover:to-red-900">
+                            Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!--
+            Mobile menu, show/hide based on mobile menu state.
+    
+            Entering: "duration-200 ease-out"
+              From: "opacity-0 scale-95"
+              To: "opacity-100 scale-100"
+            Leaving: "duration-100 ease-in"
+              From: "opacity-100 scale-100"
+              To: "opacity-0 scale-95"
+          -->
+                <script>
+                    function toggleMobileMenu() {
+                        $('#mobile-menu').toggle("fast")
+                    }
+                </script>
+                <div hidden id="mobile-menu"
+                    class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right">
+                    <div class="rounded-lg shadow-lg ring-2 ring-zinc-900 bg-zinc-800">
+                        <div class="pt-5 pb-6 px-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <img class="h-8 w-auto" src="https://tdv.minecraftmusical.com/textures/TDV5.png"
+                                        alt="">
+                                </div>
+                                <div class="-mr-2">
+                                    <button onclick="toggleMobileMenu()" type="button"
+                                        class="bg-zinc-600 rounded-md p-2 inline-flex items-center justify-center text-zinc-400 hover:text-zinc-500 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                        <span class="sr-only">Close menu</span>
+                                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-6 px-5">
+                            <div class="pb-6 grid grid-cols-2 gap-4">
+                                <a href="/index.html" class="text-base font-medium text-gray-200 hover:text-gray-300">
+                                    Startseite
+                                </a>
+                                <a href="/medien/" class="text-base font-medium text-gray-200 hover:text-gray-300">
+                                    Medien
+                                </a>
+                                <a href="/team.html" class="text-base font-medium text-gray-200 hover:text-gray-300">
+                                    Team
+                                </a>
+                                <a href="/referenzen.html" class="text-base font-medium text-gray-200 hover:text-gray-300">
+                                    Referenzen
+                                </a>
+                            </div>
+                            <div class="mt-6">
+                                <a href="https://discord.gg/HM5AbccMzk"
+                                    class="w-full flex items-center justify-center bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-red-700 hover:to-red-900">
+                                    Discord
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <main>
+            <div class="relative">
+                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-zinc-700"></div>
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+                        <div class="absolute inset-0">
+                            <img class="h-full w-full object-cover blur-sm"
+                                src="https://tdv.minecraftmusical.com/textures/th1.png?width=928&height=522"
+                                alt="People working on laptops">
+                            <div class="absolute inset-0 bg-gradient-to-r from-red-800/40 to-red-700/40 mix-blend-multiply">
+                            </div>
+                        </div>
+                        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+                            <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                                <span class="block text-white">Ein Musical in Minecraft</span>
+                            </h1>
+                            <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+                                Das ultimative Theater Erlebnis jetzt auch in Minecraft
+                            </p>
+                            <div class="mt-24 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                                <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                                    <a href="#scroll-down"
+                                        class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-red-600 bg-white hover:bg-indigo-50 sm:px-8">
+                                        Mehr erfahren
+                                    </a>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#7289DA] bg-opacity-80 hover:bg-opacity-90 sm:px-8">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-4"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                                        </svg>
+                                        Discord
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- TODO: In production entfernen
+            --- TODO ---<br>
+            Referenzen<br>
+            Header Icon Link<br>
+            Medien beanspruchen<br>
+            Sicherheit<br>
+            --- TODO END ----->
+            
+            
+            <div class="bg-zinc-700">
+                <div class=" max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                    <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+                        Ankündigungen
+                    </p>
+                    <div class="mt-6" id="news-cards">
+                        
+                    </div>
+                    <div class="mb-6 flex w-full" id="news-spinner">
+                        <div class="m-auto">
+                            <div class="animate-spin rounded-full border-l-2 border-t-2 w-8 h-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- TODO: make a suitable solution -->
+        <div class="bg-zinc-700" hidden>
+            <div class=" max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+                    Ankündigungen
+                </p>
+                <div>
+                    <video class="w-full mt-4" controls>
+                        <source src="https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4" type="video/mp4">
+                        Bitte aktualisiere deinen Browser.
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="bg-zinc-800">
+            <div class="relative pt-16 pb-24 overflow-hidden">
+                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-zinc-700"></div>
+                <div class="relative">
+                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                            <div>
+                                <div>
+                                    <span
+                                        class="text-white h-12 w-12 font-extrabold rounded-md flex items-center justify-center bg-gradient-to-r from-red-500 to-red-700">
+                                        1
+                                    </span>
+                                </div>
+                                <div class="mt-6" id="sroll-down">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-100">
+                                        Das Stück
+                                    </h2>
+                                    <p class="mt-4 text-lg text-gray-400">
+                                        Das Musical "Tanz der Vampire" basiert auf dem gleichnamigen Roman von Regisseur Roman Polański. Gemeinsam mit der Hilfe
+                                        von Jim Steinman (Musik) und Michael Kunze (Buch) wurde das Musical erstmals am 04. Oktober 1997 im Wiener
+                                        Raimundtheater uraufgeführt. Das Musical wurde in insgesamt 12 Sprachen übersetzt und zählte bis jetzt ca. 9 Millionen
+                                        Besucher.
+                                        <br>
+                                        Das oberste Ziel des Projektes ist es, das Wiener Kultmusical bestmöglich zu imitieren und zu zeigen was im
+                                        Computerspiel „Minecraft“ alles möglich ist. Unsere Teammitglieder haben sich dazu entschieden große Teile ihrer
+                                        Freizeit dem Projekt zu widmen um eine qualitativ hochwertige Nachahmung von "Tanz der Vampire" zu gewährleisten.
+                                        Neugierig?
+                                    </p>
+                                    <div class="mt-6">
+                                        <a href="#"
+                                            class="inline-flex bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-red-700 hover:to-red-900">
+                                            Programmheft
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0">
+                            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://tdv.minecraftmusical.com/textures/th3.png?width=1202&height=676"
+                                    alt="Inbox user interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24">
+                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                            <div>
+                                <div>
+                                    <span
+                                        class="text-white h-12 w-12 font-extrabold rounded-md flex items-center justify-center bg-gradient-to-r from-red-500 to-red-700">
+                                        2
+                                    </span>
+                                </div>
+                                <div class="mt-6">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-200">
+                                        Die Theatermap
+                                    </h2>
+                                    <p class="mt-4 text-lg text-gray-400">
+                                        Das Theater ist unteranderem aus der Inspiration des Park Theaters Göggingen entstanden und soll dessen Wärme und Anmut
+                                        widerspiegeln. Daher zieren große bunte Fenster den Theatersaal. Die Parkanlage um das Theater ist in einen
+                                        symmetrischen barockischen Stil angelegt, welches durch moderne Einwürfe kontrastiert wird. Dies spiegelt das Hotel auf
+                                        der gegenüber liegenden Seite ebenfalls wieder. Das ehemalige Stadtschloss wurde komplett entkernt und überrascht die
+                                        Hotelgäste mit einem modernen Design. Besonders der Keller ist eine architektonische Meisterleistung, welche gekonnt
+                                        durch seine Unregelmäßigkeiten in der Symmetrie im Raum kontrastiert und somit ein besonderes Gefühl erschafft.
+                                        <br>
+                                        Die Theatermap wurde von unseren <a target="_blank" href="https://www.youtube.com/channel/UCcVeRmfFOrAK5jalzP9yVAQ"
+                                            style="text-decoration: underline; font-weight: bolder;">
+                                            Chef Designer Vinctilus
+                                        </a> konzipiert, der Mitglied des wohlbekannten Bauteams <a target="_blank" href="https://www.youtube.com/c/Darkenya/featured"
+                                            style="text-decoration: underline; font-weight: bolder;">
+                                            Darkenya
+                                        </a>
+                                        ist.
+                                    </p>
+                                    <div class="mt-6">
+                                        <a href="theater.html"
+                                            class="inline-flex bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-red-700 hover:to-red-900">
+                                            Mehr Infos
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+                            <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://tdv.minecraftmusical.com/textures/th2.png?width=1202&height=676"
+                                    alt="Customer profile user interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24">
+                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                            <div>
+                                <div>
+                                    <span
+                                        class="text-white h-12 w-12 font-extrabold rounded-md flex items-center justify-center bg-gradient-to-r from-red-500 to-red-700">
+                                        3
+                                    </span>
+                                </div>
+                                <div class="mt-6" id="sroll-down">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-100">
+                                        Die Technik
+                                    </h2>
+                                    <p class="mt-4 text-lg text-gray-400">
+                                        Die Technik, die hinter der Animation und den ganzen Ablauf der Show steckt, ist eine Verschmelzung aller in Minecraft
+                                        verfügbaren Ressourcen.
+                                        <br>
+                                        Eigens für die Animation wurde eine auschließlich dafür bestimmte Engine programmiert (Datapack) mit Hilfe derer man
+                                        Animationen mittels Keyframes und Commandblocktechniken umsetzen kann. 
+                                        <br>
+                                        Die Technik verbindet Ressourcepack, Datapack, Redstone, Command- und Structureblock Techniken um das Unmögliche in
+                                        Minecraft Vanilla (ohne Modifikationen) möglich zu machen.
+                                        <br>
+                                        Interesse wie man die Technik baut?
+                                        <br>
+                                        Dann schau auf 
+                                        <a target="_blank" href="https://www.youtube.com/channel/UCYbRGScasxuBqlbrJtIAarg"
+                                            style="text-decoration: underline; font-weight: bolder;">
+                                            MilitaerMilitz YouTube Kanal
+                                        </a>
+                                        vorbei
+                                    </p>
+                                    <div class="mt-6">
+                                        <a href="technik.html"
+                                            class="inline-flex bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-red-700 hover:to-red-900">
+                                            Weitere Einblicke
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0">
+                            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://tdv.minecraftmusical.com/textures/th4.png?width=1202&height=676"
+                                    alt="Inbox user interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24">
+                    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                            <div>
+                                <div>
+                                    <span
+                                        class="text-white h-12 w-12 font-extrabold rounded-md flex items-center justify-center bg-gradient-to-r from-red-500 to-red-700">
+                                        4
+                                    </span>
+                                </div>
+                                <div class="mt-6">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-200">
+                                        Die Musik
+                                    </h2>
+                                    <p class="mt-4 text-lg text-gray-400">
+                                        Die Musik, die ein wesentlicher Bestandteil eines
+                                        jeden Musicals ist, ist komplett in Minecraft
+                                        mithilfe von Notenblöcken und Commandblöcken parodiert worden. <br>
+                                        Sie wird in aufwendiger Arbeit per Hand von wildparkmaedel und
+                                        unter der Leitung von Linphator gebaut.
+                                        Dabei stellt es eine große Herausforderung dar mit den begrenzten
+                                        Möglichkeiten, die Minecraft bietet, das bestmögliche
+                                        musikalische Erlebnis zu erzielen. <br>
+                                        Auf
+                                        <a target="_blank" href="https://www.youtube.com/channel/UCKB14NibRymqBTfld5SBofg"
+                                            style="text-decoration: underline; font-weight: bolder;">
+                                            Linphators YouTube Kanal
+                                        </a>
+                                        gibt es weitere
+                                        Informationen zu der Musik. Außerdem kann die
+                                        bereits gebaute Musik dort oder auf unserem
+                                        <a target="_blank" href="https://discord.gg/HM5AbccMzk" style="text-decoration: underline; font-weight: bolder;">
+                                            Discord Server
+                                        </a>
+                                        angehört werden.
+                                    </p>
+                                    <div class="mt-6">
+                                        <a href="#"
+                                            class="inline-flex bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-red-700 hover:to-red-900">
+                                            Musik anhören
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+                            <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://tdv.minecraftmusical.com/textures/th5.png?width=1202&height=676"
+                                    alt="Customer profile user interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="relative bg-red-900">
+                <div class="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
+                    <div class="h-full w-full xl:grid xl:grid-cols-2">
+                        <div class="h-full xl:relative xl:col-start-2">
+                            <img class="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0"
+                                src="https://github.com/MilitaerMilitz/TDV-Website/raw/master/textures/th2_.png"
+                                alt="People working on laptops">
+                            <div aria-hidden="true"
+                                class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-red-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r">
+                            </div>
+                            <div class="absolute w-full h-full flex">
+                                <div class="m-auto w-0 h-0 xl:h-auto xl:w-auto opacity-100 hover:opacity-25 duration-200">
+                                    <img src="https://tdv.minecraftmusical.com/textures/TDV4.png" alt="TDV Logo" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+                    <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
+                        <p class="mt-3 text-3xl font-extrabold text-white">
+                            Ein komplettes Musical, in Minecraft
+                        </p>
+                        <p class="mt-5 text-lg text-gray-300">Mehrere Stunden voller Spannung, Musik und Emotionen.
+                            Und das alles in dem Videospiel Minecraft. Es hat so viele Möglichkeiten und lässt Kreativen
+                            Köpfen freien lauf. Dieses Projekt wurde von vielen Menschen auf dei Beine gestellt, welche fast
+                            alle gerne mit Klötzchen spielen. <a href="team.html"
+                                style="text-decoration: underline; font-weight: bolder;">
+                                Sieh dir das Team an
+                            </a>
+                        </p>
+                        <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+                            <p>
+                                <span class="block text-2xl font-bold text-white">2.000+</span>
+                                <span class="mt-1 block text-base text-gray-300"><span
+                                        class="font-medium text-white">Commandblöcke</span> wurden bereits platziert.</span>
+                            </p>
+    
+                            <p>
+                                <span class="block text-2xl font-bold text-white">9.000+</span>
+                                <span class="mt-1 block text-base text-gray-300"><span
+                                        class="font-medium text-white">Notenblöcke</span> wurden insgesamt gestellt.</span>
+                            </p>
+    
+                            <p>
+                                <span class="block text-2xl font-bold text-white">86%</span>
+                                <span class="mt-1 block text-base text-gray-300"><span
+                                        class="font-medium text-white">Positive Rückmeldung</span>
+                                        von Spielern die das Stück gesehen haben.
+                                    </span>
+                            </p>
+    
+                            <p>
+                                <span class="block text-2xl font-bold text-white">220+</span>
+                                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Menschen</span>
+                                    sind bereits unserer Community beigetreten.
+                                    <a target="_blank" href="https://discord.gg/HM5AbccMzk" style="text-decoration: underline; font-weight: bolder;">
+                                        Sei auch einer davon.
+                                    </a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-zinc-800">
+                <div
+                    class="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-200 sm:text-4xl">
+                        <span class="block">Überzeugt?</span>
+                        <span class="block bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">Die Preview wartet auf dich!</span>
+                    </h2>
+                    <div class="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
+                        <a href="https://discord.gg/HM5AbccMzk"
+                            class="flex items-center justify-center bg-gradient-to-r from-red-600 to-red-800 bg-origin-border px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-red-700 hover:to-red-900">
+                            Discord
+                        </a>
+                        <a href="#"
+                            class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-700 bg-indigo-50 hover:bg-indigo-100">
+                            Mehr Infos zur Preview
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <footer class="bg-zinc-800 border-t-2 border-t-zinc-600" aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:pt-24 lg:px-8">
+                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                    <div class="grid grid-cols-2 gap-8 xl:col-span-2">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                    Das Projekt
+                                </h3>
+                                <ul role="list" class="mt-4 space-y-4">
+                                    <li>
+                                        <a href="/stueck.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Das Stück
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/theater.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Theater
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/technik.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Technik
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/medien/musik.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Musik
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-12 md:mt-0">
+                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                    Medien
+                                </h3>
+                                <ul role="list" class="mt-4 space-y-4">
+                                    <li>
+                                        <a href="/medien/index.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Alle Medien
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/medien/videos.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Videos
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/medien/bilder.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Bilder
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/medien/musik.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Musik
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                    Team
+                                </h3>
+                                <ul role="list" class="mt-4 space-y-4">
+                                    <li>
+                                        <a href="/team.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Gesamtes Team
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/team.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Linphator
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/team.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Militalex
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-12 md:mt-0">
+                                <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                    Rechtliches
+                                </h3>
+                                <ul role="list" class="mt-4 space-y-4">
+                                    <li>
+                                        <a href="/daten.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Deine Sicherheit
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/medien/beanspruchen.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Medien beanspruchen
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/impressum.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Impressum
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/datenschutz.html" class="text-base text-gray-300 hover:text-gray-400">
+                                            Datenschutz
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 xl:mt-0">
+                        <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                            Discord
+                        </h3>
+                        <p class="mt-4 text-base text-gray-300">
+                            Werde Teil unser ständig wachsenden Community, um keine Kleinigkeit mehr zu verpassen.
+                        </p>
+                        <a href="https://discord.gg/HM5AbccMzk"
+                            class="mt-8 flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#7289DA] bg-opacity-80 hover:bg-opacity-90 sm:px-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 mr-4"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                            </svg>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-gray-500 pt-8 md:flex md:items-center md:justify-between lg:mt-16">
+                    <div class="flex space-x-6 md:order-2">
+
+                        <a href="https://discord.gg/HM5AbccMzk" class="text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">Discord</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCKB14NibRymqBTfld5SBofg" class="text-gray-400 hover:text-gray-500">
+                            <span class="sr-only">YouTube</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+                        &copy; 2021 minecraftmusical.com (TDV in Minecraft) — Alle Rechte vorbehalten
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        let modalData = []
+        function toggleNewsModal(id) {
+            if(!$('#news-modal-parent').is(":visible")) {
+                $('#modal-title').html(modalData[id].title);
+                $('#modal-subtitle').html(modalData[id].subtitle);
+                $('#modal-desc').html(modalData[id].desc);
+            }
+            $('#news-modal-parent').fadeToggle(400);
+        }
+        $(document).ready(initNewsCards);
+        function initNewsCards() {
+            fetchFromDataSource('/data/news.json', function (json) {
+                modalData = json.news;
+                    $('#news-spinner').hide();
+                    for(let i = 0; i < modalData.length; i++) {
+                        $('#news-cards').append(`
+                            <div class="flex justify-center col-span-3">
+                                <button
+                                    onclick="window.open('${modalData[i].buttonLink}', '${modalData[i].buttonTarget}')"
+                                    class="bg-zinc-600 hover:bg-zinc-600/50 hover:ring-1 ring-gray-500 transition-all duration-200 ring-inset w-full overflow-hidden shadow rounded-lg flex flex-col">
+                                    <div class="px-4 py-5 sm:p-6 w-full">
+                                        <h2 class="text-2xl font-bold text-center">${modalData[i].title}</h2>
+                                        <p class="mt-2 text-justify">${truncate(modalData[i].desc, 2000)}</h>
+                                    </div>
+                                    <div class="px-4 py-4 sm:px-6 flex mt-auto w-full">
+                                        <span class="mt-auto text-sm text-gray-300 font-medium">${modalData[i].subtitle}</span>
+                                        <div
+                                            class="ml-auto inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white focus:outline-none">
+                                            ${modalData[i].buttonText}
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 ml-2"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        `);
+                    }
+            })
+        }
+        function truncate(str, n){
+            return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str;
+        };
+    </script>
+
+    <div id="news-modal-parent" style="display: none;" class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div id="news-modal-bg" class="fixed inset-0 bg-zinc-900 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+    <div id="news-modal" class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+      <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
+        <button onclick="toggleNewsModal()" type="button" class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span class="sr-only">Close</span>
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="sm:flex sm:items-start">
+        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-gray-300 sm:mx-0 sm:h-10 sm:w-10">
+         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6 w-6 text-white" viewBox="0 0 16 16">
+  <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+  <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+</svg>
+        </div>
+        <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+          <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-title">
+            Preview kommt bald
+          </h3>
+          <div class="text-lg mt-1 leading-6 font-medium text-gray-500" id="modal-subtitle">
+             — Linphator (21.4.2019)
+          </div>
+          <div class="mt-2">
+            <p class="text-sm text-gray-700" id="modal-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nostrum neque, officia dolore quia, mollitia veniam totam culpa <br>
+              corporis magnam, eum vel vitae aliquid soluta ut? Assumenda corrupti quaerat fugit!<br>
+              Dolorum corrupti provident deleniti soluta nam?<br>
+              Ipsam facilis corrupti odio quod unde provident earum praesentium iure ea, dignissimos impedit maiores, repellat delectus doloribus facere accusantium voluptate. Dignissimos quidem sit porro?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="preloader-wrapper" class="fixed z-[1000] w-full h-full top-0 left-0 bg-neutral-900 flex items-center justify-center">
+        <div class="animate-pulse">
+            <img src="https://tdv.minecraftmusical.com/textures/TDV5.png" alt="TDV Logo">
+        </div>
+    </div>
+    <script src="/dist/global.js"></script>
+    <script src="/dist/_index.js"></script>
+</body>
+</html>

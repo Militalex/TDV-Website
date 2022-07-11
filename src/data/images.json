@@ -1,0 +1,37 @@
+{
+    "_comment": "Beim ändern der Daten das Datum akutalisieren",
+    "updated": "15.03.2022 12:08",
+
+    "images": [
+        {
+            "_comment": "Name des Bildes mit Datum",
+            "subtitle": "Bild von irgendwas (1.4.2022)",
+
+            "source": "https://tdv.minecraftmusical.com/textures/th5.png?width=1202&height=676"
+        },
+        {
+            "_comment": "Name des Bildes",
+            "subtitle": "Bild von irgendwas (1.4.2022)",
+
+            "source": "https://tdv.minecraftmusical.com/textures/th4.png?width=1202&height=676"
+        },
+        {
+            "_comment": "Name des Bildes",
+            "subtitle": "Bild von irgendwas (1.4.2022)",
+
+            "source": "https://tdv.minecraftmusical.com/textures/th2.png?width=1202&height=676"
+        },
+        {
+            "_comment": "Name des Bildes",
+            "subtitle": "Bild von irgendwas (1.4.2022)",
+
+            "source": "https://tdv.minecraftmusical.com/textures/th3.png?width=1202&height=676"
+        },
+        {
+            "_comment": "Name des Bildes",
+            "subtitle": "Bild von irgendwas (1.4.2022)",
+
+            "source": "https://tdv.minecraftmusical.com/textures/th1.png?width=928&height=522"
+        }
+    ]
+}

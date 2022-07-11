@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-slider::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background-color: transparent !important;
+}
+.custom-slider {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    @apply bg-red-600 cursor-pointer rounded-full h-4 w-4;
+}
+.custom-slider::-webkit-slider-thumb:hover {
+    @apply bg-red-700;
+}

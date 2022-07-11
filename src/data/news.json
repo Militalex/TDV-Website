@@ -1,0 +1,16 @@
+[
+        {
+            "_id": "0",
+
+            "title": "Adminbewerbung",
+
+            "_comment": "Datum der Neuigkeit",
+            "subtitle": "17.03.2022",
+
+            "desc": "Unsere Adminbewerbungen sind jetzt wieder offen!<br>Wir suchen nach engagierten und freundlichen Admins die uns hier helfen.<br>Wir freuen uns auf deine Bewerbung.",
+
+            "buttonText": "Jetzt Bewerben",
+            "buttonLink": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "buttonTarget": "_blank"
+        }
+    ]
