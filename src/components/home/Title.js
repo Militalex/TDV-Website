@@ -1,4 +1,5 @@
 import React from 'react'
+import Video from '../Video'
 
 export default function Title() {
     return (
@@ -7,11 +8,12 @@ export default function Title() {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
                     <div className="absolute inset-0">
-                        <video
+                        <Video
+                            path="/videos/home_background"
                             autoPlay
                             muted
+                            playsInline
                             className="h-full w-full object-cover blurry"
-                            src="/videos/home_background.webm"
                             width="928"
                             height="522"
                         />
