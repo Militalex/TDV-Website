@@ -9,7 +9,12 @@ Start: `npm run start`
 - [X] Animation
 - [X] Ankündigungen raus
 - [X] Video raus
-- [ ] GIF in Hintergrund + ohne rotstich
+- [X] GIF in Hintergrund + ohne rotstich
 - [ ] Rote Ding bei Bildern offensichtlicher
 - [ ] Bilder gleich groß
 - [ ] Header Mobile Version Fix
+
+### Mili TODO
+- [x] Animation Smoothes Ende ?
+- [ ] Logo nach Animation Ende
+- [ ] Ausklappen automatisch 
