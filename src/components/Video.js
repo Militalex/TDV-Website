@@ -1,7 +1,6 @@
 import React from 'react'
 
 function WebmVideo(options) {
-    console.log(options)
     return (
         <video {...options}>
             <source src={options.path + ".webm"} type="video/webm" />
